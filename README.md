@@ -7,9 +7,8 @@ A control-systems project utilizing an **MPU-6050 IMU** and a **Servo motor** to
 
 ## Demo
 ## 📽️ Project Demo
-[![![IMG_20260108_175429391](https://github.com/user-attachments/assets/6439b31b-9fa1-4a9b-a287-6a80082261be)
-](https://img.youtube.com/vi/YOUTUBE_ID/0.jpg)](https://drive.google.com/file/d/1xcsY3xpC1quTVqw-IwucDDFRCWHgtK1X/view?usp=sharing)
-*Click the image above to watch the system in action.*
+[https://github.com/user-attachments/assets/b8555255-f7fc-4dbb-a765-5b99e74ad546]
+
 ---
 
 ## Overview
