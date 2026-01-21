@@ -64,7 +64,7 @@ To address "orientation drift" during high-velocity maneuvers, the Complementary
 
 ---
 
-## 💻 Source Code
+## Source Code
 The following implementation is written in C++/Arduino and uses an Object-Oriented approach for hardware management.
 
 ```cpp
