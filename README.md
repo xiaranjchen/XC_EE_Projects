@@ -1,13 +1,14 @@
-# Self-Righting Ball System
+# Self-Righting Ball System Prototype
 **Electrical Engineering Portfolio Project | Freshman Year**
 
-A control-systems project utilizing an **MPU-6050 IMU** and a **Servo motor** to maintain a level orientation through real-time sensor fusion and feedback loops.
+A "think-sense-act" control-systems project prototype utilizing an **MPU-6050 IMU**, a **Arduino Uno R3** and a **Servo motor** to maintain a level orientation through real-time sensor fusion and feedback loops.
 
 ---
 
 ## Demo
-## 📽️ Project Demo
+## Project Demo & Pictures
 [https://github.com/user-attachments/assets/b8555255-f7fc-4dbb-a765-5b99e74ad546]
+![IMG_20260108_175429391](https://github.com/user-attachments/assets/dc31e8bb-ae99-4e92-a1bb-05490d553f26)
 
 ---
 
