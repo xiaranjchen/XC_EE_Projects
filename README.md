@@ -5,15 +5,27 @@ A "think-sense-act" control-systems project prototype utilizing an **MPU-6050 IM
 
 ---
 
-## Demo
-## Project Demo & Pictures
-[https://github.com/user-attachments/assets/b8555255-f7fc-4dbb-a765-5b99e74ad546]
-![IMG_20260108_175429391](https://github.com/user-attachments/assets/dc31e8bb-ae99-4e92-a1bb-05490d553f26)
+## 📽️ Project Demo & Pictures
 
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/b8555255-f7fc-4dbb-a765-5b99e74ad546" width="100%" />
+</div>
+
+<br />
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/dc31e8bb-ae99-4e92-a1bb-05490d553f26" width="32%" />
+  <img src="https://github.com/user-attachments/assets/1d5f42f5-4a2f-4363-ab8b-3584d94d51f7" width="32%" />
+  <img src="https://github.com/user-attachments/assets/c16999c6-dfa3-4770-b928-a1657f85dad4" width="32%" />
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a89208c2-a9c1-4cb6-9e02-1ef1227c090e" width="32%" />
+  <img src="https://github.com/user-attachments/assets/0a29f502-a92c-4789-a238-79fc02551a56" width="32%" />
+</p>
 ---
 
 ## Overview
-This project implements an embedded system capable of "self-righting" a ball platform. By interpreting raw data from a 6-axis Gyroscope/Accelerometer, the system calculates tilt error and adjusts a servo motor to counteract gravitational pull and external disturbances.
+This project implements an embedded system capable of "self-righting" a ball platform. By interpreting raw data from a 6-axis Gyroscope/Accelerometer, the system calculates tilt error in a 2-d plane (xz) and adjusts a servo motor to counteract gravitational pull and external disturbances.
 
 ### Technical Highlights:
 * **Sensor Fusion:** Implemented a **98/2 Complementary Filter** to combine high-frequency gyroscope data with low-frequency accelerometer stability.
@@ -31,15 +43,20 @@ This project implements an embedded system capable of "self-righting" a ball pla
 ---
 
 ## How it Works
-The system solves the two main problems of cheap IMU sensors:
-1.  **Gyro Drift:** The gyroscope is accurate but "drifts" over time.
-2.  **Accelerometer Noise:** The accelerometer is stable but very "noisy" during quick movements.
+1. In the class "Gyroscope", the code first initializes all proper hardware through desired pins, and necessary variables to store values
+2. Initialize the initial angle by taking 1000 readings (can be changed) from the gyroscope, adding all data up and dividing by number of data sets     to find initial angle our system wants to correct back to.
+3. Our system now continuously takes readings from our IMU sensor's, figures out the current angle it is at, and corrects back to the desired angle. 
+   The system solves the two main problems of cheap IMU sensors:
+    1.  **Gyro Drift:** The gyroscope is accurate but "drifts" over time.
+    2.  **Accelerometer Noise:** The accelerometer is stable but very "noisy" during quick movements.
 
 **The Math:**
 The code uses the following filter logic:
 `Angle = 0.98 * (Angle + Gyro_Rate * dt) + 0.02 * (Accel_Angle)`
 
+---
 
+**Future Directions**
 
 ---
 
